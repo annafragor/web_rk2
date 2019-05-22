@@ -22,13 +22,13 @@ if __name__ == '__main__':
             while True:
                 data = conn.recv(1024)
 
-                # decoded_data = f.decodeData(data, key)
+                # decoded_data = f.decodeData(input_data, key)
                 # If remainder is all zeros then no error occured
                 # temp = "0" * (len(key) - 1)
                 # if decoded_data == temp:
-                #     conn.sendall(data + b" received.\nNO ERROR.")
+                #     conn.sendall(input_data + b" received.\nNO ERROR.")
                 # else:
-                #     conn.sendall(b"ERROR in data")
+                #     conn.sendall(b"ERROR in input_data")
 
                 data_with_error = f.xor(data, "1")
                 decoded_data_with_error = f.decodeData(str.encode(data_with_error), key)
@@ -36,5 +36,5 @@ if __name__ == '__main__':
                 if decoded_data_with_error == temp:
                     conn.sendall(data + b" received.\nNO ERROR.")
                 else:
-                    conn.sendall(b"ERROR in data")
+                    conn.sendall(b"ERROR in input_data")
                 break

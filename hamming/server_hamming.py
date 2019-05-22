@@ -20,4 +20,4 @@ if __name__ == '__main__':
             while True:
                 data = conn.recv(1024)
                 msg, decoded_data = f.decode(data.decode())
-                conn.sendall(str.encode(msg) + b"Decoded data: " + str.encode(decoded_data))
+                conn.sendall(str.encode(msg) + b"Decoded input_data: " + str.encode(decoded_data))
