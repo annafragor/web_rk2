@@ -3,8 +3,8 @@
 import socket
 import crc.functions as f
 
-HOST = '127.0.0.1'  # The server's hostname or IP address
-PORT = 65433        # The port used by the server
+HOST = '127.0.0.1'
+PORT = 65433
 
 key = "1001"
 

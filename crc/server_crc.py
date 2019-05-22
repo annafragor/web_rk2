@@ -5,8 +5,8 @@ import crc.functions as f
 
 poly = 0xEDB88320
 
-HOST = '127.0.0.1'  # Standard loopback interface address (localhost)
-PORT = 65433        # Port to listen on (non-privileged ports are > 1023)
+HOST = '127.0.0.1'
+PORT = 65433
 
 key = "1001"
 
@@ -37,3 +37,4 @@ if __name__ == '__main__':
                     conn.sendall(data + b" received.\nNO ERROR.")
                 else:
                     conn.sendall(b"ERROR in data")
+                break
